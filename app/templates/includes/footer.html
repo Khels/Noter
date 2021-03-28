@@ -1,0 +1,9 @@
+{% load cache %}
+{% cache 500 footer_page %}
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <p class="m-0 text-dark text-center ">
+            <a href="{% url 'about:author' %}">About author</a> - <a href="{% url 'about:tech' %}">Technologies</a>
+        </p>
+        <p class="m-0 text-dark text-center "><span style="color:red">No</span>ter © {{ year }}, all rights reserved.</p>
+    </footer>
+{% endcache %}
