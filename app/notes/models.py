@@ -9,7 +9,7 @@ class Note(models.Model):
 
     text = models.TextField(
         _('content'),
-        help_text="Write everything down here so as not to forget it later!",
+        help_text=_('Write everything down here so as not to forget it later!'),
     )
     date_created = models.DateTimeField(
         _('date of creation'),
@@ -26,7 +26,7 @@ class Note(models.Model):
         upload_to='notes/',
         blank=True,
         null=True,
-        help_text='Attach here any image you want if need be'
+        help_text=_('Attach here any image you want if need be'),
     )
 
     def __repr__(self):
